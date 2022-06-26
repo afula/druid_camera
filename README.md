@@ -1,2 +1,2 @@
 # druid_camera
-exoeriments for druid and camera
+experiments for druid and camera

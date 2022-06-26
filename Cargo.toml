@@ -1,0 +1,34 @@
+[package]
+name = "druid_camera"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+druid = { git = "https://github.com/linebender/druid.git", features = ["image", "png"]}
+druid-widget-nursery = { git = "https://github.com/linebender/druid-widget-nursery"}
+image = "0.24.2"
+#imageproc = "0.23.0"
+gstreamer = "0.18.8"
+gstreamer-app =  "0.18.7"
+gstreamer-pbutils =  "0.18.7"
+glib = "0.15.11" # gobject traits and error type
+thiserror = "1"
+url = "2" # media uri
+num-rational = "0.4" # framerates come in rationals
+num-traits = "0.2" # convert rationals to floats (ToPrimitive)
+#itertools = "0.10.3"
+#[patch.crates-io.druid]
+#git = "https://github.com/linebender/druid"
+#rev = "fc05e965c85fced8720c655685e02478e0530e94"
+anyhow = "1.0"
+log = "0.4.17"
+time = { version = "0.3.7", features = ["macros", "formatting"] }
+time-humanize = { version = "0.1.3" }
+derive_more = "0.99.5"
+[dev-dependencies]
+criterion = "0.3.5"
+
+[profile.release]
+lto = true
